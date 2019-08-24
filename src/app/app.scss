@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "Ionicons";
+  src: url("../assets/fonts/ionicons.eot");
+  src: url("../assets/fonts/ionicons.eot") format("embedded-opentype"), url("../assets/fonts/ionicons.woff2") format("woff2"), url("../assets/fonts/ionicons.woff") format("woff"), url("../assets/fonts/ionicons.ttf") format("truetype"), url("../assets/fonts/ionicons.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+// http://ionicframework.com/docs/theming/
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+::-webkit-scrollbar {
+width: 0px;
+background: transparent; 
+display:none;
+}
+
+ion-spinner{
+  height:70px !important;
+  width:70px !important;
+}
+.loading-md .spinner-crescent circle {
+stroke:rgba(230,62,62,1) !important;
+
+}
+
+.scroll-content {
+    padding-bottom: 0 !important;
+}
+
+.twitfollow{
+  width:60% !important;
+}
+.avatar{
+  width:30% !important;
+  padding-bottom:.3vh;
+  border-radius:50px;
+}
+
+.namedlc{
+  font-size:30px !important;
+}
+
+.textleft{
+  font-size:18px !important;
+  text-align:left !important;
+  margin-bottom:2vh !important;
+}
+
+.loading-md .loading-wrapper{
+background:transparent !important;
+padding:0px !important;
+box-shadow:none !important;
+
+}
+
+
+
+.alert-input-wrapper{
+ // font-family: "Courier";
+}
+
+.alert-md .alert-input{
+	font-size:22px !important;
+	color:white !important;
+  border-color:rgba(230,62,62,1) !important;
+  border-bottom: 1px solid #dedede !important;
+}
+
+
+
+
+.alert-message{
+  max-height:100% !important;
+  text-align:center !important;
+  color:white !important;
+  font-size:18px !important;
+  padding-bottom:2px !important;
+}
+
+.alert-title{
+  text-decoration: underline;
+  text-align:center
+}
+
+.alert-button-group{
+padding:6px 0px 0px 0px !important;
+}
+
+
+.alert-button{
+padding-right:20px !important;
+color:rgba(230,62,62,1) !important;
+text-shadow: .1vw .1vw 5vw red;
+font-size:23px;
+//margin-top:-20px !important;
+margin-bottom:10px !important;
+
+}
+
+
+.alert-radio-label{
+  color:white !important;
+}
+
+.alert-md .alert-button {
+  //color:rgba(255,62,62,.9) !important;
+}
+
+.alert-head{
+padding:10px 10px 10px 10px !important;
+}
+
+.alert-md .alert-wrapper{
+  border: 1px solid gray;
+  //max-width:90% !important;
+  max-width:55vh !important;
+  width:55vh !important;
+  color:white;
+  background:rgba(10,10,10,.85);
+  font-family: "This side up";
+  //src: url("/assets/mm.ttf");
+}
+
+@font-face {
+
+  font-family: "Ticking Timebomb BB";
+  src: url("/assets/tt.otf");
+
+}
+
+@font-face {
+
+font-family: "This side up";
+  src: url("/assets/mm.otf");
+
+}
+
+

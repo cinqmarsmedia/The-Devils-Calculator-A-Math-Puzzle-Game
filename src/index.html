@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Devil's Calculator</title>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <script src="assets/js/ses.umd.js"></script>
+    <script>
+
+let toStringOrig = Number.prototype.toString
+
+Number.prototype.toString = function(radix){
+
+if (radix<2 && radix>-11 && parseInt(radix)==parseFloat(radix) && parseInt(this)==this){
+
+if (radix==0){
+    return 0;
+}else if (radix==1){
+    var ones=""
+    for (i=0;i<this;i++){
+        ones+="1";
+    }
+    return ones;
+}else{
+    var conv="";
+    var n=this;
+
+    while (n!==0){
+
+        var rem=n%radix;
+       n=parseInt(n/radix)
+
+        if (rem<0){
+            rem+=-1*radix;
+            n+=1;
+        }
+        conv=String(rem)+conv
+
+    }
+    return conv
+    }
+
+
+
+}else{
+return toStringOrig.call(this,radix)
+}
+
+}
+
+
+/**/
+//let parseIntOrig = parseInt;
+
+parseIntNeg = function(num,radix) {
+  console.log(radix)
+       if (radix<-1 && radix>-11 && parseInt(radix)==parseFloat(radix) && parseInt(num)==num){
+
+
+  for (var c=Math.abs(radix);c<10;c++){
+  if (String(num).includes(String(c))){
+    return 'NaN'
+  }
+
+}
+
+ num=String(num);
+
+num=num.split('');
+
+var counter=0;
+
+num.forEach((d,i)=>{
+if (d>0){
+    counter += Math.pow(radix,num.length-1-i)*parseInt(d)
+    }
+})
+
+
+return counter;
+
+
+    }else{
+
+        return parseInt(num,radix);
+
+  }
+
+
+
+}
+
+
+
+
+
+    </script>
+    <!-- <script src="assets/js/circular-json.js"></script> -->
+<!--
+    <script>
+      var debugMessages = "";
+      //monkey patch console
+      ["log", "info", "warn", "error"].forEach(function(msgType) {
+        var temp = console[msgType];
+        console[msgType] = function() {
+          var str = "";
+          str += msgType + " [" + new Date() + "]\n";
+
+          for (
+            var _len = arguments.length, args = new Array(_len), _key = 0;
+            _key < _len;
+            _key++
+          ) {
+            args[_key] = arguments[_key];
+          }
+
+          temp.apply(void 0, args);
+          args.forEach(function(arg) {
+            return (str += CircularJSON.stringify(arg) + " ");
+          });
+          str += "\n";
+          window["debugMessages"] += "*****\n" + str;
+        };
+      });
+
+      var postLog = userLog => {
+        if (window["debugMessages"] != "") {
+          fetch("https://x1.jitinluthra.com/log", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              log: userLog
+            })
+          }).then(() => {
+            window["debugMessages"] = ""; //if there are changes when the request is being made, they would be deleted and lost
+          });
+        }
+      };
+
+      setInterval(() => {
+        postLog(debugMessages);
+      }, 15000);
+    </script>
+-->
+    <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#4e8ef7" />
+
+    <!-- add to homescreen for ios -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <script src="assets/js/howler.min.js"></script>
+    <!-- cordova.js required for cordova apps (remove if not needed) -->
+    <script src="cordova.js"></script>
+
+    <!-- un-comment this code to enable service worker
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+    }
+  </script>-->
+
+    <link href="build/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Ionic's root component and where the app will load -->
+    <ion-app></ion-app>
+
+    <!-- The polyfills js is generated during the build process -->
+    <script src="build/polyfills.js"></script>
+
+
+    <!-- The vendor js is generated during the build process
+       It contains all of the dependencies in node_modules -->
+    <script src="build/vendor.js"></script>
+
+
+    <!-- The main bundle js is generated during the build process -->
+    <script src="build/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,766 @@
+
+<ion-content>
+
+<div *ngIf="ads[0] || ads[2]" [ngClass]="{'notchtwo':notch}" style="width:100%;height:100%;position:absolute;background:linear-gradient(rgba(7,0,0,.9),rgba(7,0,0,.7));z-index:999" class="nicefont">
+<!-- SYNONYMY -->
+<div style="color:white;height:80%;text-align:center">
+
+  <img *ngIf="ads[0]" src="assets/imgs/512.png" style="width:calc(22vh - 7vw);margin-top:3vh;max-width:150px">
+  <img *ngIf="ads[2] && mobile" src="assets/imgs/politi.png" style="width:calc(22vh - 7vw);margin-top:3vh;max-width:150
+  px">
+  <img *ngIf="ads[2] && !mobile" src="assets/imgs/cham.png" style="width:calc(22vh - 7vw);margin-top:3vh;max-width:150px">
+
+<div style="width:100%;padding-top:2vh;padding-bottom:3vh;font-size:3.5vh;text-align:center;padding-left:3vw;padding-right:3vw">
+
+<span *ngIf="ads[0]">
+<b>Synonymy</b>: A Word Game Narrated by <i>Richard Dawkins</i>
+</span>
+<span *ngIf="ads[2] && mobile">
+<b>PolitiTruth</b>: A PolitiFact <i>Fake News</i> Game
+</span>
+<span *ngIf="ads[2] && !mobile">
+<b>Chameleon Video Player</b>: A Transparent Media App
+</span>
+
+<hr>
+</div><div style="width:100%;padding-left:8vw;padding-right:8vw;font-size:2.5vh;margin-top:-2vh;text-align:left">
+
+
+<span *ngIf="ads[0]">
+<b>Synonymy</b> is a non-profit, educational word game narrated by Richard Dawkins in which players are challenged to find the paths between random words through their network of synonyms
+</span>
+<span *ngIf="ads[2] && mobile">
+A fake news, fact checking quiz game that challenges players to distinguish political fact from fiction, <i>sponsored by PolitiFact</i><br>
+</span>
+<span *ngIf="ads[2] && !mobile">
+Non-profit utility software that helps multitaskers and gamers reclaim their computer screen space and increase productivity<br>
+</span>
+
+<!--<img src="assets/imgs/screen.jpg" style="width:25vh;float:right">-->  
+</div>
+<!--
+<img src="assets/imgs/cmm.png" style="width:20%;margin-top:5vh;margin-left:13vw">Cinq-Mars Media
+-->
+<div class="video-wrap" style="margin-top:3vw">
+
+<iframe *ngIf="ads[0]" width="570" height="315" src="https://www.youtube.com/embed/Y1cu0i-4gb8?modestbranding=1&autohide=1&showinfo=0&controls=0"frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe *ngIf="ads[2] && mobile" width="570" height="315" src="https://www.youtube.com/embed/Kv5aCjYkLmM?modestbranding=1&autohide=1&showinfo=0&controls=0"frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe *ngIf="ads[2] && !mobile" width="570" height="315" src="https://www.youtube.com/embed/vhTlnjp7fdU?modestbranding=1&autohide=1&showinfo=0&controls=0"frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+</div>
+</div>
+
+
+
+
+<div style="text-align:center;margin-top:4vh" class="nicefont">
+<button [ngClass]="{'synbuttonback':ads[0],'polbuttonback':ads[2] && mobile,'chambuttonback':ads[2] && !mobile}" class="buytwo" style="max-width:27vh;max-height:10vh" ion-button large tappable (click)="adClose()">back</button>
+<button  [ngClass]="{'synbuttontry':ads[0],'polbuttontry':ads[2] && mobile,'chambuttontry':ads[2] && !mobile}" class="buytwo buyfire" style="width:40vw;max-width:27vh;max-height:10vh;margin-left:4vw" ion-button large tappable (click)="tryApp(ads[0])">try free</button>
+</div>
+
+</div>
+
+
+  <!--
+  <img src="/assets/imgs/slides/slide1.gif" loop>
+-->
+<div *ngIf="(ads[3] || ads[1]) && wideview" style="width:100%;height:100%;position:absolute;background:linear-gradient(rgba(7,0,0,.9),rgba(7,0,0,.6));z-index:999" class="nicefont">
+
+<div style="color:white;height:80%">
+  
+<div style="width:100%;padding-top:8vh;padding-bottom:3vh;font-size:5vh;text-align:center">
+<span *ngIf="ads[3]">
+<b>Thank you</b> for playing!
+</span>
+<span *ngIf="ads[1]">
+<b>Upgrade</b> to the <b>full</b> version!
+</span>
+
+<hr>
+</div><div style="width:100%;padding-left:8vw;padding-right:8vw;font-size:4vh;margin-top:-2vh;text-align:left"><b>The Devil's Calculator</b> was made by a <b>501(c)3 non-profit</b> devoted to education through technology. Please consider purchasing the <b>full version</b> to unlock the rest of the game and <b>support our charity</b>. Students and educators with a current edu|ac address can <span style="cursor: pointer" (click)="eduPrompt()"><b><u>unlock free</u></b></span>
+<!--<img src="assets/imgs/screen.jpg" style="width:25vh;float:right">-->  
+</div>
+<!--
+<img src="assets/imgs/cmm.png" style="width:20%;margin-top:5vh;margin-left:13vw">Cinq-Mars Media
+-->
+<div>
+
+  <img src="assets/imgs/icon.png" style="width:17%;margin-top:5vh;margin-left:10vw;border-radius:2vw;float:left">
+
+<div style="text-align:left;float:left;padding-top:3vh;left:46vw;font-size:2.7vw;width:25%;text-shadow: .1vw .1vw 3vw red;color:rgba(255,62,62,1)" class="tt">
+  <ul>
+  <li>70+ Levels</li>
+  <!--
+  <li>3 functions</li>
+  <li>Illustrated Story</li>
+-->
+   <li>User Challenges</li>
+  <li>Level Maker</li>
+  <li>Free DLC</li>
+  <li>Non-Profit</li>
+</ul>
+</div>
+
+<img src="assets/imgs/slides/Shot_22.gif" style="width:38%;padding-top:2vh">
+</div>
+</div>
+
+
+
+<!--
+<div *ngIf="ads[3]" style="text-align:center;margin-top:2vh" class="nicefont">
+<button ion-button class="buybutton buyfire" large tappable (click)="buyButton()">Unlock</button>
+</div>
+-->
+<div *ngIf="ads[1] || ads[3]" style="text-align:center;margin-top:2vh" class="nicefont">
+<button class="buytwodesk" style="background:rgb(223,150,94) !important" ion-button large tappable (click)="adClose()"><span [hidden]="ads[3]">
+later
+</span>
+<span [hidden]="ads[1]">
+replay
+</span>
+</button>
+<button class="buytwodesk buyfire upgrade" style="width:40vw;margin-left:4vw" ion-button large tappable (press)="unlockHold()" (click)="buyButton()"> <span [hidden]="ads[3]">
+Upgrade
+</span>
+<span [hidden]="ads[1]">
+Unlock
+</span></button>
+</div>
+
+</div>
+
+
+<div *ngIf="(ads[3] || ads[1]) && !wideview" [ngClass]="{'notchtwo':notch}" style="width:100%;height:100%;position:absolute;background:linear-gradient(rgba(7,0,0,.9),rgba(7,0,0,.6));z-index:999" class="nicefont">
+
+<div style="color:white;height:80%">
+  <div>
+  <img src="assets/imgs/icon.png" style="width:31%;margin-top:5vh;margin-left:13vw;border-radius:4vw">
+</div>
+<div [ngClass]="{'notchthree':notch}" style="text-align:left;position:absolute;top:2.9vh;left:46vw;font-size:5.5vw;width:68%;text-shadow: .1vw .1vw 3vw red;color:rgba(255,62,62,1)" class="tt">
+  <ul>
+  <li>70+ Levels</li>
+  <!--
+  <li>3 functions</li>
+  <li>Illustrated Story</li>
+-->
+  <li>User Challenges</li>
+  <li>Level Maker</li>
+  <li>Free DLC</li>
+  <li>Non-Profit</li>
+</ul>
+</div>
+<div style="width:100%;padding-top:2vh;padding-bottom:3vh;font-size:3.5vh;text-align:center">
+<span *ngIf="ads[3]">
+<b>Thank you</b> for playing!
+</span>
+<span *ngIf="ads[1]">
+<b>Upgrade</b> to the <b>full</b> version!
+</span>
+<hr>
+</div><div style="width:100%;padding-left:7vw;padding-right:7vw;font-size:2.5vh;margin-top:-2vh;text-align:left"><b>The Devil's Calculator</b> was made by a <b>501(c)3 non-profit</b> devoted to education through technology. Please consider purchasing the <b>full version</b> to unlock the rest of the game and <b>support our charity</b>. Students and educators with current university emails can <button style="cursor: pointer;color:white;background-color:rgb(208,83,77);border-radius:5px;font-size:2vh" (click)="eduPrompt()"><b>upgrade free</b></button>
+<!--<img src="assets/imgs/screen.jpg" style="width:25vh;float:right">-->  
+</div>
+<!--
+<img src="assets/imgs/cmm.png" style="width:20%;margin-top:5vh;margin-left:13vw">Cinq-Mars Media
+-->
+<div style="text-align:center;margin-top:3vh">
+<img src="assets/imgs/slides/compressed/Shot_22.gif" style="width:44vh">
+</div>
+</div>
+
+
+<!--
+<div *ngIf="ads[3]" style="text-align:center;margin-top:4vh" class="nicefont">
+<button ion-button class="buybutton buyfire" large tappable (click)="buyButton()">Get Full Version</button>
+</div>
+-->
+<div *ngIf="ads[1] || ads[3]" style="text-align:center;margin-top:4vh" class="nicefont">
+<button class="buytwo" style="background:rgb(223,150,94) !important" ion-button large tappable (click)="adClose()">
+<span [hidden]="ads[3]">
+later
+</span>
+<span [hidden]="ads[1]">
+replay
+</span>
+
+</button>
+<button class="buytwo buyfire upgrade" style="width:40vw" ion-button large tappable (press)="unlockHold()" (click)="buyButton()">
+  <span [hidden]="ads[3]">
+Upgrade
+</span>
+<span [hidden]="ads[1]">
+Unlock
+</span>
+
+
+</button>
+</div>
+
+</div>
+  <!---->
+ <div class="slidebck" [style.opacity]="slideshowstate.length==0 ? '0' : '1'" [style.visibility]="slideshowstate.length==0 ? 'hidden' : 'visible'" style="position:absolute;width:100%;height:100%;background:rgba(0,0,0,.75);z-index:10">
+ </div>
+
+ <div *ngIf="!mobile || wideview" key-press (onKeyPress)='handleKeyboardEvent($event)'></div>
+
+<!--
+<iframe src="http://m.wolframalpha.com" class="oeis" [ngClass]="{'nothing':!desktop}"></iframe>
+-->
+<div class="container">
+<div *ngIf="creation" [ngClass]="{'notch':notch}">
+    <button tappable (click)="bckCreate()" class="backbtn" ion-button icon-only>
+      <ion-icon style="font-size:30px !important" name="arrow-back"></ion-icon> Back
+    </button>
+
+    <div style="float:right">
+      <button class="levelcreatebtn" ion-button large color="light" [ngClass]="{'btnOn':customlvlfunc[0]}" tappable (click)="clickFunc('Δ')" (press)="defFunc('Δ')"> 
+        <span [ngClass]="{'alphaOff':!customlvlfunc[0],'alphaOn':customlvlfunc[0]}" style="padding-left:1vh">Δ</span>
+      </button>
+
+      <button [hidden]="level<18" class="levelcreatebtn" ion-button large color="light" [ngClass]="{'btnOn':customlvlfunc[1]}" tappable (click)="clickFunc('ψ')" (press)="defFunc('ψ')"> 
+          <span [ngClass]="{'betaOff':!customlvlfunc[1],'betaOn':customlvlfunc[1]}">ψ</span> 
+      </button>
+
+      <button [hidden]="level<51" class="levelcreatebtn" style="margin-right:5vmin" ion-button large color="light" [ngClass]="{'btnOn':customlvlfunc[2]}" tappable (click)="clickFunc('φ')" (press)="defFunc('φ')"> 
+          <span [ngClass]="{'gammaOff':!customlvlfunc[2],'gammaOn':customlvlfunc[2]}" style="padding-top:1vw">φ</span> 
+      </button>
+    </div>
+
+<div style="width:100%;float:right;padding-left:1vmax;padding-right:2vmax;padding-top:2vh;color:white;font-size:3.2vmin;text-shadow:0px 1px #000" class="mm">
+  Use this tool to create your very own user challenges and upload them for others to play. Tap the function buttons to define them, and tap again to add them to your formula. <b>(press and hold to redefine)</b>
+  <hr style="color:white;height:3px;background:white;border-radius:2px;border-top: 0px !important;box-shadow: 0px 0px 0px white !important"/>
+</div>
+<div style="float:left;width:100%">
+<ion-label color="primary" class="createlabels tt" stacked>Number to Calculate
+      <span style="font-size:3.5vmin !important;line-height:10px !important">(Can be any integer)</span>
+    </ion-label>
+<textarea class="inputfield" id="tocompute" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" [(ngModel)]="lvltocompute" placeholder="666">
+</textarea>
+
+
+    <ion-label color="primary" class="createlabels tt" stacked>Formula that equals {{lvltocompute}}
+      <span style="font-size:3.5vmin !important;line-height:10px !important"> (use symbols above)</span>
+    </ion-label>
+<textarea type="number" class="inputfield" id="formula" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" [(ngModel)]="customlvlformula" placeholder="i.e. Δ(φ9ψ-3)">
+</textarea>
+</div>
+<div style="float:left;width:100%">
+<ion-label color="primary" class="createlabels tt" stacked>Disabled Numbers<span style="font-size:3.5vmin"> (on fire)</span></ion-label>
+
+<textarea class="inputfield" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" [(ngModel)]="customlvlonfire" placeholder="i.e. 5,0,2,.,-,9"></textarea>
+</div>
+<div style="float:left;width:100%">
+<ion-label color="primary" style="font-size:3.5vmin" class="createlabels tt" stacked>Challenge Hint</ion-label>
+
+<textarea class="inputfield" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" [(ngModel)]="customlvlhint" placeholder="Hint for others"></textarea>
+<br>
+
+</div>
+<div style="width:100%;float:right;padding-left:2.5vmax;padding-right:2.5vmax;padding-top:1.5vmax;color:white;font-size:1.7vh;text-shadow:0px 1px #000;line-height:1.6vh" class="mm">
+
+Your created challenges will not show up in your own game, they will only be playable to others under the username "<u>{{username}}</u>". The order in which levels are presented to users is an algorithm that takes into consideration community feedback. To suggest levels without having to code, use this <a href="https://goo.gl/forms/oztwpVeUpYmfPbp73"> online form</a><!--, though submissions from this source are manually checked and vetted before they are included.--> 
+</div>
+<div style="float:left;width:100%;padding-top:1.5vh">
+<button ion-button class="submitlevel buytwo buyfire upgrade" large tappable (click)="submitLevel()"> <span >Submit</span></button>
+</div>
+<div class="createbck"></div>
+</div>
+
+<div *ngIf="!creation" [ngClass]="{'blur':ads[3]}">
+
+<!-- tutorial popups?-->
+
+<!-- blur?????-->
+<!--top:67%;left:12%;width:70%;height:10%;-->
+<div *ngIf="level==1 && tutpop[0]>0 && !help && !replayscreen && !notes && !wideview" class="fadeInUp animated" [ngStyle]="{'top':tutpop[1],'left':tutpop[2],'width':tutpop[3],'height':tutpop[4]}" style="position:absolute;background:rgba(0,0,0,.9);z-index:9999;color:white;border-radius:1%;font-family:'Courier New';font-size:4vmin;line-height:3.4vmin">
+  <!---->
+  <img [ngClass]="{'flipped':tutpop[6]}" src="/assets/imgs/share.svg" style="position:absolute;right:0;width:15%;transform: rotate(90deg);margin-right:-5vmax;bottom:3vmax;">
+
+  <img src="/assets/imgs/error.svg" style="position:absolute;left:0;width:11%;margin-top:-1.5vmax;margin-left:-1.5vmax;cursor:pointer" (click)="closeTut()">
+
+<div style="padding-top:1.7vmax;padding-left:1vmax;padding-right:1vmax">
+  {{tutpop[5]}}
+</div>
+</div>
+
+
+<!---->
+
+<div [ngClass]="{'notch':notch,'tablet':tablet,'wideview':wideview}" style="margin-bottom:1.3vw;text-align:center" class="screen-frame">
+<!-- PERFORMANCE removing class= scanlines improves atleast idle performance by 10% -->
+<div (press)="holdScreen()" class="screen">
+<!--[ngClass]="{'scanlines':!mobile}"-->
+<!-- SLIDER
+<img src="/assets/imgs/test.jpg" style="width:100%;height:100%">
+-->
+
+
+<div *ngIf="slideshowstate.length>0">
+  <img *ngIf="filmleader" src="{{'/assets/imgs/leader'+mobile+'.gif'}}" style="width:100%;height:100%">
+<ion-slides class="swiper-no-swiping" pager="false">
+
+<ion-slide *ngFor = 'let item of slideshowstate'>
+<img *ngIf="overlaygif" class="slideover" src="{{overlaygif}}">
+<img class="slide" src="{{item}}">
+</ion-slide>
+
+</ion-slides>
+</div>
+<!-- -->
+<div *ngIf="!(!wideview || help || notes || graph || replayscreen) && !slideshowstate.length>0" class="desktopfire" [ngClass]="{'flash animated infinite':flashonfire}">
+
+<img [hidden]="onfirebtnsdesk.length==0" src="/assets/imgs/fire4.gif" style="width:4.8vw;height:3vw">
+<span style="font-size:3vw !important;margin-left:-1.5vw !important">
+{{onfirebtnsdesk}}
+</span>
+</div>
+
+<!---->
+<div *ngIf="replayscreen">
+<div class="level">level select</div>
+<div class="equation"><span *ngIf="skipped.length>0">Skipped:{{skipped | slice:0:5 | json | slice:1:-2}}<span [hidden]="skipped.length<6">...</span></span> </div> <!-- max 4?-->
+
+<div style="font-size:6vw;position:absolute;line-height:6vw;top:27vw">
+<span style="padding-left:3vw;padding-right:3vw">
+ Enter the level you wish to play followed by "="
+</span>
+
+
+ <div *ngIf="dlcPlayed.length==0" style="font-size:3vw;line-height:3.4vw !important;padding-top:1vw">Notes for each level are saved. Memory, history and graph data is lost <br><i>Enter '.XX.' from the main screen as a shortcut to level XX</i></div>
+
+  <div *ngIf="dlcPlayed.length>0" style="font-size:3vw;line-height:3.4vw !important;padding-top:1vw;padding-left:1vw;padding-right:1vw"><b>DLC</b> can be replayed by inputting a <b>decimal point</b> before the lvl #<br><i>Enter '.XX.' from the main screen as a shortcut to level XX</i></div>
+
+</div>
+</div>
+
+<div *ngIf="!(notes || help || graph || slideshowstate.length>0)" class="game animate-flicker" >
+
+<div class="equation" [hidden]="replayscreen">{{equation}}</div>
+
+<div [hidden]='result==devilString || replayscreen' class="level">level: <b>{{level}}</b>
+<span *ngIf="isNaN(level) && (!nothingleft || dlcMode)">*<b>{{targetvalue}}</b></span>
+</div>
+
+<div class="screen-backgroundtwo">8888888888888888888888888888888888888</div>
+<span>
+            {{result}}
+</span>
+<div class="screen-background">8888888888</div>
+
+
+  
+<div style="position:absolute;height:20vw;top:26vw;align-items: center !important;
+    justify-content: center !important" class="card-deck row">
+
+            <div [hidden]="result.toString().length>10 || replayscreen" class="card col-md-6" *ngFor="let history of historys.slice(equation?1:0)">
+                    <h4 class="historyElem">{{history}} </h4>
+                       </div> </div>  
+
+
+<!--ToolTips-->
+
+<div *ngIf="result!==devilString && result!=='Next User Challenge' && !filmleader && !(result.toString().length>10) && !block && ((historys.length<1 && !equation) || (historys.length<2 && equation)) && !help && !notes && !graph && !replayscreen && (!nothingleft || dlcMode)" style="position:absolute;font-size:4vw;left:0;right:0;bottom:3vh;margin-left:auto;margin-right:auto;width:85%;text-align:center" >
+
+  <span *ngIf="tooltip && !levelprompt" [innerHtml]="tooltip"></span>
+ 
+  <span *ngIf="levelprompt">
+     <b>Math Fact:</b> {{levelprompt}}
+  </span>
+
+  </div>
+</div>
+
+
+
+<!--HELP VIEW -->
+<div *ngIf="!(notes || !help || graph)" class=" animate-flicker">
+
+ <img class="wolframtwo" src="/assets/imgs/wolfram.png">
+<div [ngClass]="{'helpdesktop':desktop}" class="help" *ngIf="!hint">
+  <!-- [innerHTML]="helpText"-->
+  {{helpText}}
+  <div style="text-align:center;font-size:3.5vw;position:absolute;bottom:1.2vh">- - - - - - - <span [hidden]="(totalComputations>15 && !(level<10) && !(level-skipped.length<5) || (isNaN(level) && !dlcMode))"><i>Hold Screen for Wolfram MathWorld</i></span>
+
+    <span *ngIf="totalComputations>15 && !(level<10) && !(level-skipped.length<5)">Score:
+
+ {{isNaN(level) ? (Math.floor(2*Math.pow(3*Math.pow((68-skipped.length+((playedOnline.length+dlcPlayed.length)+1)/5),2.25)/Math.pow(totalComputations,.2),1.11))|number):Math.floor(2*Math.pow(3*Math.pow((level-skipped.length),2.25)/Math.pow(totalComputations,.2),1.11)) | number}}
+
+
+</span> - - - - - - -<br><span *ngIf="!isNaN(level)">Levels are won by infering the functions of all available symbols (Δ,ψ,φ) and using them to calculate the integer 666. Save operations to memory (m1,m2,m3) and avoid keys on fire</span>
+<span *ngIf="isNaN(level) && !dlcMode">Use the code '.00000' followed by '=' to reset your game data, and the code '4973.' (the 666th prime) to immediately skip ahead to the postgame and full level access in the future</span>
+
+<span *ngIf="isNaN(level) && dlcMode">
+In DLC mode, you will see the winning integer beside beside an asterisk * in the upper left. Submit levels for inclusion online.
+</span>
+</div>
+</div>
+
+
+<!--
+<div [ngClass]="{'lineheit':soul>2}" style="font-size:10vw;padding-top:7vw" *ngIf="!(!hint || keyboardshort)">
+
+<span [hidden]="soul>2">
+  Enter the number 666 to sell part of your soul for a hint.
+</span>
+ <span [hidden]="soul!==2" style="font-size:5vw"><br>Are you sure?</span>
+  <span [hidden]="soul!==1" style="font-size:5vw"><br>Really? Almost there...</span>
+ -->
+ <!--
+ <span [hidden]="soul<3" style="font-size:5vw;line-height:5vw !important">
+  {{levelhint}}
+ </span>
+-->
+ <!---->
+ <!--
+ <span [hidden]="soul!==6 || !isNaN(level)" style="font-size:8vw">
+  {{levelanswer}}
+ </span>
+
+ <div [hidden]="soul<3" style="position:absolute;left:0;right:0;margin-left:auto;margin-right:auto;font-size:4vw;top:35vw">
+  <span [hidden]="soul!==3 || isNaN(level)">
+ Enter 666 again to sell the rest of your soul to skip this level and return later
+</span>
+  <span [hidden]="soul!==3 || !isNaN(level)">
+ Enter 666 again to sell the rest of your soul to reveal the answer to this level
+</span>
+  <span [hidden]="soul!==4">
+Giving up so soon?
+</span>
+  <span [hidden]="soul!==5">
+I thought you were up for a challenge... 
+</span>
+  <span [hidden]="soul!==6 || isNaN(level)">
+//Enter this formula to proceed to the next level
+</span>
+</div>
+
+
+</div>
+-->
+<!--  NEW HINTS -->
+
+<div id='hints' style="font-size:5vw;padding-top:1vw;padding-left:4vw;padding-right:4vw;line-height:6vw" *ngIf="hint">
+  <div style="font-size:3vw;padding-bottom:3vw;text-align:right"><i>hold screen for more on Wolfram</i><br></div>
+
+  {{levelhint}}
+
+
+
+ <div style="position:absolute;left:2vw;right:2vw;margin-left:auto;margin-right:auto;font-size:4vw;top:39vw;padding-left:2vw;line-height:3.5vw">
+  <span [hidden]="!isNaN(level)">
+Reveal answer by pressing<br><span [hidden]="wideview" style="font-size:5vw">©</span><span [hidden]="!wideview"><b>skip</b></span>
+</span>
+  <span [hidden]="isNaN(level)">
+ Skip level and return later by pressing<br><span [hidden]="wideview" style="font-size:5vw">©</span><span [hidden]="!wideview"><b>skip</b></span>
+</span>
+</div>
+</div>
+
+<!-- -->
+
+</div>
+
+<!-- Graph View -->
+<div *ngIf="graph">
+<span style="position:absolute;font-size:2.8vmin;right:3vw;top:.5vh;opacity:.7">
+ <i> hold screen to plot on wolfram</i>
+</span>
+   <img class="wolframthree" src="/assets/imgs/wolfram.png">
+<div *ngIf="graphdata && !keyboardshort" style="position: relative; width:88vw;padding-top:1vw;margin-left:-1px">
+  <canvas #lineCanvas style="position:relative;z-index:1"></canvas> <!--height="49vw"-->
+</div>
+<div style="font-size:5.6vw;padding:2vw;padding-top:7.3vw !important" [hidden]="graphdata || keyboardshort">
+  The results of any single opertion equations in your history will be graphed here. Binary operations must use the same number for both arguments to be graphed. Reset by holding C (AC, all clear). 
+</div>
+
+<div class="keyboardshort" *ngIf="keyboardshort">
+ <div style="padding-bottom:1vh"> Keyboard Shortcuts</div>
+  <span style="float:left;padding-left:7vw;font-size:4vw !important;text-align:left;width:50%;line-height:3.7vw"><b>Δ</b>: a,j,[<br><b>ψ</b>: s,k,]<br><b>φ</b>: d,l,\\<br>Equals: Enter, =<br>Clear: backsp,esc, c<br>AC: Delete, shift+C<br>Calc: #<br>help: right arrow<br>notes:left arrow<br>Wolfram: w , OEIS: o</span>
+  <span style="float:right;padding-left:7vw;font-size:4vw !important;text-align:left;width:50%;line-height:3.7vw">MR1: shift+1<br>MR2: shift+2<br>MR3: shift+3<br>MS1: alt+1<br>MS2: alt+2<br>MS3: alt+3<br>SFX/Mute: _<br>graph: up/dn arrow<br><!---->Server Sync: *<br>CopyClip: p</span>
+</div>
+
+
+</div>
+
+
+
+<!--NOTES VIEW -->
+
+<div [ngClass]="{'helpdesktop':desktop}" [hidden]="!notes || help || graph" style="z-index:99" class="animate-flicker help">
+
+ <img class="wolframtwo" src="/assets/imgs/wolfram.png">
+
+<textarea autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" id="notesInput" (blur)="focusNotes()" [(ngModel)]="notesText" (ngModelChange)="textareasanitize($event)"></textarea>
+
+</div>
+<div [ngClass]="{'brighter':notes || help || graph}" style="will-change: transform;transform: translateZ(0);opacity:.06;position:absolute;top:.2vw;right:0vw;left:0vw;bottom:0vw;width:100%;font-size:5vw;z-index:0;color:rgba(255,0,0,1);line-height:4.17vw" >8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888</div>
+
+</div>
+          <!-- -->
+           <div [ngClass]="{'desktopenvraving':wideview}" class="engraving">
+            <!--
+            <img class="wolfram" src="/assets/imgs/wolfram.png">
+-->
+            <div [hidden]="ads[0] || ads[1] || ads[2] || ads[3]" [ngClass]="{'led-blue':help,'led-green':notes,'led-red':err,'led-orange':graph,'led-yellow':hint,'led-purples':replayscreen,'led-key':keyboardshort,'ledwide':wideview}" class="led"></div>
+            <!--
+               <ion-toggle></ion-toggle>
+            -->
+            <!--
+<input id="chkbox" type="checkbox">
+  <label for="chkbox"></label>
+-->
+
+<div *ngIf="wideview">
+<!--
+   <button style="margin-left:10vw !important" class="wideviewBtns" id="calculator-button1" ion-button large color="danger" (press)="btnClicked('AC')" tappable (click)="btnClicked('C')"><div class="mm superscript desktopsuperscript">AC </div> C </button>
+-->
+
+<button style="margin-left:12vw !important" [ngClass]="{'fire':buttonDisallowState.includes('MR1') && level>3}" class="wideviewBtns" id="m1button" ion-button large color="danger" (press)="btnClicked('MS1')" tappable (click)="btnClicked('MR1')"> <div class="desktopsuperscript">{{memory[0][0]}} </div>M1<div class="desktopsymbolbelow"><span [hidden]="!memory[0][1][0]">Δ </span><span [hidden]="!memory[0][1][1]">ψ</span>  <span [hidden]="!memory[0][1][2]">φ</span> </div></button>
+
+<button [ngClass]="{'fire':buttonDisallowState.includes('MR2') && level>3}" class="wideviewBtns" id="m2button" ion-button large color="danger" (press)="btnClicked('MS2')" tappable (click)="btnClicked('MR2')"> <div class="desktopsuperscript">{{memory[1][0]}} </div>M2<div class="desktopsymbolbelow"><span [hidden]="!memory[1][1][0]">Δ </span><span [hidden]="!memory[1][1][1]">ψ</span>  <span [hidden]="!memory[1][1][2]">φ</span> </div></button>
+
+
+<!--  -->
+        <button style="margin-right:3vw !important" [ngClass]="{'fire':buttonDisallowState.includes('MR3') && level>3}" class="wideviewBtns" id="m3button" ion-button large color="danger" (press)="btnClicked('MS3')" tappable (click)="btnClicked('MR3')"> <div class="desktopsuperscript">{{memory[2][0]}} </div>M3<div class="desktopsymbolbelow"><span [hidden]="!memory[2][1][0]">Δ </span><span [hidden]="!memory[2][1][1]">ψ</span>  <span [hidden]="!memory[2][1][2]">φ</span> </div></button>
+
+
+
+
+<button id="alphabutton" class="wideviewBtns" ion-button large color="light" [ngClass]="{'btnOn':operandState[0],'hideit':alphahidden}" tappable (click)="btnClicked('Δ')" (press)="visualOperator(0)"> <span class="alphaposdesk" [ngClass]="{'alphaOff':!operandState[0],'alphaOn':operandState[0]}">Δ</span><div *ngIf="help && !hint" style="color:white !important"class="mm desktopsuperscript"><ion-icon name="md-help"></ion-icon> </div></button>
+
+<button id="betabutton" class="wideviewBtns" ion-button large color="light" [ngClass]="{'btnOn':operandState[1],'hideit':betahidden}" tappable (click)="btnClicked('ψ')" (press)="visualOperator(1)"> <span class="betaposdesk" [ngClass]="{'betaOff':!operandState[1],'betaOn':operandState[1]}">ψ</span> <div *ngIf="help && !hint" style="color:white !important"class="mm desktopsuperscript"><ion-icon name="md-help"></ion-icon> </div></button>
+
+<button id="gammabutton" class="wideviewBtns" ion-button large color="light" [ngClass]="{'btnOn':operandState[2],'hideit':gammahidden}" tappable (click)="btnClicked('φ')" (press)="visualOperator(2)"> <span class="gammaposdesk" [ngClass]="{'gammaOff':!operandState[2],'gammaOn':operandState[2]}">φ</span> <div *ngIf="help && !hint" style="color:white !important"class="mm desktopsuperscript"><ion-icon name="md-help"></ion-icon> </div></button>
+
+
+</div>
+
+
+
+ <button class="engravingbuttons" [ngClass]="{'desktopengravingbuttons':wideview,'slideengraving':wideview,'over':slide>1}" ion-button tappable (click)="notesButton()">
+   {{calcbuttons[0]}}
+<!--
+  <span [hidden]="slide==0">
+ back
+</span>
+
+
+<span [hidden]="!(!graph && !help && !replayscreen) || slide!==0" >
+
+ <span [hidden]="notes" >
+ notes
+</span>
+ <span [hidden]="!notes" >
+back
+</span>
+
+</span>
+
+<span *ngIf="(!graph && help)" >
+
+<span [hidden]="isNaN(level)">
+guide
+</span>
+
+<span *ngIf="isNaN(level)">
+<span [hidden]="nothingleft">
+skip
+</span>
+<span [hidden]="!nothingleft">
+reset
+</span>
+</span>
+
+</span>
+
+<span *ngIf="(graph || replayscreen)" >
+<span [hidden]="realLevel!==0 && realLevel!==level">
+<span [hidden]="replayscreen">
+replay
+</span>
+<span [hidden]="!replayscreen">
+back
+</span>
+</span>
+
+
+<span [hidden]="realLevel==level || realLevel==0">
+Exit Lvl
+</span>
+
+</span>
+-->
+</button>
+
+  <button class="engravingbuttons" [ngClass]="{'desktopengravingbuttons':wideview}" ion-button tappable (click)="graphs()">
+
+    {{calcbuttons[1]}}<!--,'over':slide>0-->
+<!--
+<span [hidden]="!(!notes && !help)  || slide!==0" >
+<span [hidden]="!graph" >
+back
+</span>
+<span [hidden]="graph" >
+  graph
+</span>
+</span>
+
+<span *ngIf="!(!notes && !help)">
+<span [hidden]="!(!notes && help && !hint)" >
+hint
+</span>
+
+<span [hidden]="!(!notes && help && hint && !isNaN(level))" >
+skip
+</span>
+
+<span [hidden]="!(!notes && help && hint && isNaN(level))" >
+reveal
+</span>
+
+<span *ngIf="(notes && !help)" >
+wolfram
+</span>
+
+</span>
+-->
+</button>
+
+    <button class="engravingbuttons" [ngClass]="{'desktopengravingbuttons':wideview,'over':slide>0,'pulse animated infinite':lvlcomputations>Math.round(7*Math.log(level)-.6) && (calcbuttons[2]=='help' || slide==1)}" ion-button tappable (click)="helpButton()">
+{{calcbuttons[2]}} <!--{{Math.round(7*Math.log(level)-.6)}}-->
+<!--
+  <span [hidden]="slide==0">
+ next
+</span>
+
+<span [hidden]="!(!graph && !notes) || slide!==0">
+
+<span [hidden]="help" >
+help
+</span>
+<span [hidden]="!help" >
+back
+</span>
+
+</span>
+<span *ngIf="(!graph && notes) && level>50">
+oeis
+</span>
+
+<span *ngIf="(!graph && notes) && level<51">
+calc
+</span>
+
+<span *ngIf="graph && level>60">
+create
+</span>
+  <span [hidden]="!(level<=60 && !mobile) || !graph">
+keys
+</span>
+<span [hidden]="!(level<=finalLevel) || DRM || !mobile || level>60">
+about
+</span>
+<span [hidden]="!(level<=finalLevel) || !DRM || !mobile || level>60">
+upgrade
+</span>
+-->
+  </button>
+    
+    <!--
+      <button style="width:10vw;height:7vw;font-size:3vw;border-radius:1vw" id="calculator-button23" ion-button tappable (click)="btnClicked('+ - * /')">operands</button>-->
+           </div>
+      
+        </div>
+
+<!--
+        <div style="padding-top:10px;width:80%" id="screen">
+           {{result}} 
+        </div>
+-->
+
+<div *ngIf="!wideview" [ngClass]="{'buttondivtablet':tablet}" class="buttondiv">
+
+    <div id="calculator-container3">
+        <button [ngClass]="{'notchbuttons':notch,'tabletbuttons':tablet,'fire':buttonDisallowState.includes('C')}" id="calculator-button1" ion-button large color="danger" (press)="btnClicked('AC')" tappable (click)="btnClicked('C')"><div [ngClass]="{'tabletsuperscript':tablet}" class="mm superscript">AC </div> <span style="margin-top:1vw">C</span> </button>
+       
+        <button [ngClass]="{'fire':buttonDisallowState.includes('MR1') && level>3,'notchbuttons':notch,'tabletbuttons':tablet}" id="m1button" ion-button large color="danger" (press)="btnClicked('MS1')" tappable (click)="btnClicked('MR1')"> <div [ngClass]="{'msuperscripttablet':tablet}" class="msuperscript">{{memory[0][0]}} </div>M1<div class="msymbolbelow"><span [hidden]="!memory[0][1][0]">Δ </span><span [hidden]="!memory[0][1][1]" style="margin-left:1px">ψ</span>  <span [hidden]="!memory[0][1][2]" style="margin-left:3px">φ</span> </div></button>
+
+        <button [ngClass]="{'fire':buttonDisallowState.includes('MR2') && level>3,'notchbuttons':notch,'tabletbuttons':tablet}" id="m2button" ion-button large color="danger" (press)="btnClicked('MS2')" tappable (click)="btnClicked('MR2')"> <div [ngClass]="{'msuperscripttablet':tablet}" class="msuperscript">{{memory[1][0]}} </div>M2<div class="msymbolbelow"><span [hidden]="!memory[1][1][0]">Δ </span><span [hidden]="!memory[1][1][1]" style="margin-left:1px">ψ</span>  <span [hidden]="!memory[1][1][2]"  style="margin-left:3px">φ</span> </div></button>
+
+
+<!--  -->
+        <button [ngClass]="{'fire':buttonDisallowState.includes('MR3') && level>3,'notchbuttons':notch,'tabletbuttons':tablet}" id="m3button" ion-button large color="danger" (press)="btnClicked('MS3')" tappable (click)="btnClicked('MR3')"> <div [ngClass]="{'msuperscripttablet':tablet}" class="msuperscript">{{memory[2][0]}} </div>M3<div class="msymbolbelow"><span [hidden]="!memory[2][1][0]">Δ </span><span [hidden]="!memory[2][1][1]" style="margin-left:1px">ψ</span>  <span [hidden]="!memory[2][1][2]" style="margin-left:3px">φ</span> </div></button>
+    
+
+
+      <!--
+        <div style="float:right">level: {{level}}</div>
+    -->
+    </div>
+
+    <div id="calculator-container6">
+        <button [ngClass]="{'fire':buttonDisallowState.includes('7') && !replayscreen,'notchbuttons':notch,'tabletbuttons':tablet}" id="calculator-button10" ion-button large tappable (click)="btnClicked('7')">7</button>
+        <button [ngClass]="{'fire':buttonDisallowState.includes('8') && !replayscreen,'notchbuttons':notch,'tabletbuttons':tablet}" id="calculator-button11" ion-button large tappable (click)="btnClicked('8')"> 8 </button>
+        <button [ngClass]="{'fire':buttonDisallowState.includes('9') && !replayscreen,'notchbuttons':notch,'tabletbuttons':tablet}" id="calculator-button12" ion-button large tappable (click)="btnClicked('9')"> 9 </button>
+
+        <button id="alphabutton" ion-button large color="light"  [ngClass]="{'btnOn':operandState[0],'notchbuttons':notch,'tabletbuttons':tablet,'hideit':alphahidden}" tappable (click)="btnClicked('Δ')" (press)="visualOperator(0)"> <span class="alphapos" [ngClass]="{'alphaOff':!operandState[0],'alphaOn':operandState[0],'alphapos':!tablet,'tabletalphapos':tablet}">Δ</span><div *ngIf="help && !hint" style="color:white !important" [ngClass]="{'tabletsuperscript':tablet}" class="mm superscript"><ion-icon name="md-help"></ion-icon> </div></button>
+        <!--
+        <button (press)="flipRegCalc()" [hidden]="!regCalc" id="calculator-button14" ion-button large color="secondary" tappable (click)="btnClicked('+')"> +</button>-->
+
+    </div>
+
+    <div id="calculator-container7">
+        <button [ngClass]="{'fire':buttonDisallowState.includes('4') && !replayscreen,'notchbuttons':notch,'tabletbuttons':tablet}" id="calculator-button14" ion-button large tappable (click)="btnClicked('4')"> 4 </button>
+        <button [ngClass]="{'fire':buttonDisallowState.includes('5') && !replayscreen,'notchbuttons':notch,'tabletbuttons':tablet}" id="calculator-button15" ion-button large tappable (click)="btnClicked('5')"> 5 </button>
+        <button [ngClass]="{'fire':buttonDisallowState.includes('6') && !replayscreen,'notchbuttons':notch,'tabletbuttons':tablet}" id="calculator-button16" ion-button large tappable (click)="btnClicked('6')"  (press)="forceFirebase()"> 6 <div *ngIf="help && !hint && isNaN(level)" style="color:white !important" [ngClass]="{'tabletsuperscript':tablet}" class="mm superscript"><ion-icon name="md-sync"></ion-icon> </div></button>
+        <button id="betabutton" ion-button large color="light" [ngClass]="{'btnOn':operandState[1],'notchbuttons':notch,'tabletbuttons':tablet,'hideit':betahidden}" tappable (click)="btnClicked('ψ')" (press)="visualOperator(1)"> <span [ngClass]="{'betaOff':!operandState[1],'betaOn':operandState[1],'betapos':!tablet,'tabletbetapos':tablet}">ψ</span> <div *ngIf="help && !hint" style="color:white !important" [ngClass]="{'tabletsuperscript':tablet}" class="mm superscript"><ion-icon name="md-help"></ion-icon> </div></button>
+        <!--
+         <button (press)="flipRegCalc()" [hidden]="!regCalc" id="calculator-button14" ion-button large color="secondary" tappable (click)="btnClicked('-')"> -</button>
+       -->
+    </div>
+
+    <div id="calculator-container8">
+        <button [ngClass]="{'fire':buttonDisallowState.includes('1') && !replayscreen,'notchbuttons':notch,'tabletbuttons':tablet}" id="calculator-button18" ion-button large tappable (click)="btnClicked('1')"> 1 </button>
+        <button [ngClass]="{'fire':buttonDisallowState.includes('2') && !replayscreen,'notchbuttons':notch,'tabletbuttons':tablet}" id="calculator-button19" ion-button large tappable (click)="btnClicked('2')"> 2 </button>
+        <button [ngClass]="{'fire':buttonDisallowState.includes('3') && !replayscreen,'notchbuttons':notch,'tabletbuttons':tablet}" id="calculator-button20" ion-button large tappable (click)="btnClicked('3')"> 3 
+<!--
+          <div *ngIf="help && !hint" [ngClass]="{'tabletsuperscript':tablet}" class="mm superscript"><ion-icon name="ios-calculator"></ion-icon> </div>
+-->
+        </button>
+
+        <button id="gammabutton" ion-button large color="light" [ngClass]="{'btnOn':operandState[2],'notchbuttons':notch,'tabletbuttons':tablet,'hideit':gammahidden}" tappable (click)="btnClicked('φ')" (press)="visualOperator(2)"> <span [ngClass]="{'gammaOff':!operandState[2],'gammaOn':operandState[2],'gammapos':!tablet,'tabletgammapos':tablet}">φ</span> <div *ngIf="help && !hint" style="color:white !important" [ngClass]="{'tabletsuperscript':tablet}" class="mm superscript"><ion-icon name="md-help"></ion-icon> </div></button>
+        <!--
+         <button (press)="flipRegCalc()" [hidden]="!regCalc" id="calculator-button14" ion-button large color="secondary" tappable (click)="btnClicked('*')"> *</button>
+       -->
+    </div>
+
+    <div id="calculator-container9">
+        <button [ngClass]="{'fire':buttonDisallowState.includes('0') && !replayscreen,'notchbuttons':notch,'tabletbuttons':tablet}" id="calculator-button22" ion-button large tappable (click)="btnClicked('0')"> 0 </button>
+        <button [ngClass]="{'fire':buttonDisallowState.includes('.') && !replayscreen,'notchbuttons':notch,'tabletbuttons':tablet}" id="calculator-button23" ion-button large tappable (click)="btnClicked('.')"> . </button>
+        <button [ngClass]="{'fire':buttonDisallowState.includes('negate'),'notchbuttons':notch,'tabletbuttons':tablet}" id="calculator-button23" ion-button large tappable (press)="muteSFX()" (click)="btnClicked('negate')"> <span style="margin-top:1vw">
+      
+        ¢
+      <!--<span *ngIf="false">
+      </span>-->
+      <!--
+      <span *ngIf="true">
+        DLC
+      </span>
+-->
+      </span> <div *ngIf="help && !hint" [ngClass]="{'tabletsuperscript':tablet}" class="mm superscript"><ion-icon name="md-volume-off"></ion-icon> </div></button>
+        <button [ngClass]="{'notchbuttons':notch,'tabletbuttons':tablet}" id="calculator-button25" ion-button large color="danger" tappable (click)="btnClicked('=')"> <span [ngClass]="{'equalpos':!tablet,'tabletequalpos':tablet}">=</span><!--<div *ngIf="help" [ngClass]="{'desktopsuperscript':desktop,'tabletsuperscript':tablet}" class="mm superscript"><ion-icon name="ios-calculator"></ion-icon> </div>--> </button>
+        <!--
+         <button (press)="flipRegCalc()" [hidden]="regCalc" id="calculator-button14" ion-button large color="secondary" tappable (click)="btnClicked('/')"> /</button>
+       -->
+     </div>
+</div>
+ 
+    </div>
+    </div>
+</ion-content>

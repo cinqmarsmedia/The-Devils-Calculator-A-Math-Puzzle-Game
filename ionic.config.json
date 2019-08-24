@@ -1,0 +1,7 @@
+{
+  "name": "Devils Calculator",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Devils Calculator",
+  "short_name": "Devil",
+  "start_url": "index.html",
+  "display": "standalone",
+  "play_store_key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtPTYoHp6na5FHBKNUM7+julevjGkbxK/MvG6n/Cyes9FLegFFAyo3O4N+3eDUyqf5EanXtkwpcE0cNjby4O9eyTt84X1NRdVU7r4p2gS0layH+OAFh1qSrgLoI0P9viy9LCAXBfVy25H3vgE9tqHQLT6s4LAaAiGy+50SvymGPY/gBrwzfUlbkGgiOdMOObdoH+GpPWlH0VgOT5oMxwGc7Zaz2cUySD1nQ27WssgblgWa4POqcEwcrXJgtGOUe4SmKJEYeXJxqfm7mVgRZNNhDCMZz/BpGoqS0aRMhAqz3KfjxRa39yYGOhk26KhAO1ojqkteXcY+cBFcsVIfkC39wIDAQAB",
+  "icons": [{
+    "src": "assets/imgs/logo.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "background_color": "#4e8ef7",
+  "theme_color": "#4e8ef7"
+}
