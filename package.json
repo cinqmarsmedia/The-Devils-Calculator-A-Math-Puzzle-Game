@@ -66,6 +66,7 @@
     "ionicons": "^4.0.0",
     "mathjs": "^5.5.0",
     "rxjs": "^6.2.1",
+    "rxjs-compat": "^6.2.1",
     "sw-toolbox": "3.6.0",
     "zone.js": "0.8.26"
   },
@@ -99,6 +100,7 @@
     "electron-builder": "^20.38.5",
     "firebase": "^5.2.0",
     "foreman": "^3.0.1",
+    "rxjs": "^6.2.1",
     "rxjs-compat": "^6.2.1",
     "typescript": "^2.6.2"
   },
