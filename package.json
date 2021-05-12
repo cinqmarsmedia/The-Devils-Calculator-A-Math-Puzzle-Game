@@ -46,7 +46,7 @@
   "dependencies": {
     "@types/mathjs": "^5.0.0",
     "angularfire2": "^5.0.0-rc.11",
-    "chart.js": "^2.7.2",
+    "chart.js": "^2.9.4",
     "chartjs-plugin-zoom": "^0.6.6",
     "cordova-android": "7.1.4",
     "cordova-ios": "4.5.5",
