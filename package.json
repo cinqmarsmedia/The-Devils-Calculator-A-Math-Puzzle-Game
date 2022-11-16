@@ -73,7 +73,7 @@
     "fsevents": "~1.2.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-optimizer": "0.11.3",
+    "@angular-devkit/build-optimizer": "0.1302.1",
     "@angular/animations": "5.2.11",
     "@angular/common": "5.2.11",
     "@angular/compiler": "5.2.11",
